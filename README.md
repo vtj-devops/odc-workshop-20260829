@@ -1,14 +1,7 @@
 # odc-workshop-20260829
 Open Developers Conferences 2026のワークショップで使用するリポジトリです。
 
-GitHub CopilotのAskモード（質問・コード理解）を体験するための、TypeScriptベースのシンプルなタスク管理REST APIサンプルコードが含まれています。
-
-## 技術スタック
-- **言語**: TypeScript
-- **ランタイム**: Node.js
-- **Webフレームワーク**: Express (v5)
-- **ユーティリティ**: winston (ロギング), cors, dotenv
-- **開発・ビルド**: ts-node, tsc (TypeScript Compiler)
+GitHub CopilotのAskモード（質問・コード理解）を体験するためのサンプルコードが含まれています。
 
 ## 動作要件
 - Node.js v18 以上
