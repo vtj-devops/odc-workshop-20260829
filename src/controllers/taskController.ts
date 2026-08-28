@@ -6,7 +6,7 @@ export const getAllTasks = (req: Request, res: Response): void => {
   res.json(tasks);
 };
 
-export const getTaskById = (req: Request, res: Response): void => {
+export const getTaskById = (req: Request<{ id: string }>, res: Response): void => {
   const task = taskService.findById(req.params.id);
   if (!task) {
     res.status(404).json({ message: 'タスクが見つかりません。' });
@@ -25,7 +25,7 @@ export const createTask = (req: Request, res: Response): void => {
   res.status(201).json(newTask);
 };
 
-export const updateTask = (req: Request, res: Response): void => {
+export const updateTask = (req: Request<{ id: string }>, res: Response): void => {
   const updatedTask = taskService.update(req.params.id, req.body);
   if (!updatedTask) {
     res.status(404).json({ message: 'タスクが見つかりません。' });
@@ -34,7 +34,7 @@ export const updateTask = (req: Request, res: Response): void => {
   res.json(updatedTask);
 };
 
-export const deleteTask = (req: Request, res: Response): void => {
+export const deleteTask = (req: Request<{ id: string }>, res: Response): void => {
   const success = taskService.remove(req.params.id);
   if (!success) {
     res.status(404).json({ message: 'タスクが見つかりません。' });
